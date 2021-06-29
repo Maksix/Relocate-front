@@ -1,0 +1,78 @@
+.ant-menu-horizontal {
+  position: relative;
+  max-height: 40px;
+  line-height: 40px;
+  font-size: 12px;
+}
+
+.ant-menu {
+  .ant-menu-item:first-child {
+    width: 150px;
+
+    svg {
+      position: absolute;
+      bottom: 11px;
+      left: 27px;
+      width: 100px;
+      height: 25px;
+    }
+  }
+}
+
+@media screen and (min-width: 660px) {
+  .ant-menu-horizontal {
+    position: relative;
+    max-height: 65px;
+    line-height: 65px;
+    font-size: 14px;
+  }
+
+  .ant-menu {
+    .ant-menu-item:first-child {
+      width: 175px;
+      margin: 0 25px;
+
+      svg {
+        position: absolute;
+        bottom: 21px;
+        left: 27px;
+        width: 120px;
+        height: 30px;
+      }
+    }
+
+    .ant-menu-item:nth-child(3) {
+      float: right;
+      margin: 0 20px;
+    }
+
+    .ant-menu-item:nth-child(4) {
+      float: right;
+    }
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .ant-menu {
+    .ant-menu-item:first-child {
+      width: 220px;
+      margin: 0 75px;
+
+      svg {
+        position: absolute;
+        bottom: 17px;
+        left: 27px;
+        width: 160px;
+        height: 40px;
+      }
+    }
+
+    .ant-menu-item:nth-child(3) {
+      margin: 0 75px;
+    }
+  }
+}
+
+.ant-menu-title-content:empty {
+  display: none;
+}
