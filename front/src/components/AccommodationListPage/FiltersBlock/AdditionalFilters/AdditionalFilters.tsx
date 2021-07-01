@@ -5,7 +5,7 @@ import { DownOutlined } from '@ant-design/icons';
 
 const { Panel } = Collapse;
 
-const rulesOfAccommodation = [
+export const rulesOfAccommodation = [
   {
     value: 'isAllowedPets',
     label: 'Можно с животными',
@@ -24,7 +24,7 @@ const rulesOfAccommodation = [
   },
 ];
 
-const accommodationOptions = [
+export const accommodationOptions = [
   {
     value: 'balcony',
     label: 'Балкон',
@@ -58,6 +58,7 @@ const accommodationOptions = [
     label: 'Телевизор',
   },
 ];
+
 const AdditionalFilters: React.FC = () => (
   <Collapse
     expandIcon={({ isActive }) => <DownOutlined style={{ color: '#bfbfbf' }} rotate={isActive ? 180 : 0} />}

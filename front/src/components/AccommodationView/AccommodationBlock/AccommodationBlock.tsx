@@ -1,8 +1,10 @@
 import React from 'react';
 import './AccommodationBlock.less';
-import { Badge, Carousel, Image } from 'antd';
-import _ from 'lodash';
-import { CaretRightOutlined, CaretLeftOutlined } from '@ant-design/icons';
+import OwnerInfoBlock from './OwnerInfoBlock/OwnerInfoBlock';
+import SpaceBlock from './SpaceBlock/SpaceBlock';
+import TitleAddressBlock from './TitleAddressBlock/TitleAddressBlock';
+import CarouselBlock from './CarouselBlock/CarouselBlock';
+import BenefitDescriptionBlock from './BenefitDescriptionBlock/BenefitDescriptionBlock';
 
 type AccommodationType = {
   accommodation: {
@@ -21,66 +23,27 @@ type AccommodationType = {
       transportTime: number,
       transportType: string,
     }[]
-    images:{ src: string }[]
+    images: { src: string }[]
     owner: {
       name: string,
       phoneNumber: string,
     }
+    options: { value: string }[]
+    rules: { value: string }[]
   };
 };
 
-// const NextArrow = ({currentSlide, slideCount, ...props}: CustomArrowProps) => (
-//   <div {...props}>
-//     <i className="fas fa-arrow-circle-right"></i>
-//   </div>
-// );
-
 const AccommodationBlock: React.FC<AccommodationType> = ({ accommodation }: AccommodationType) => {
   const {
-    id, price, description, title, floor, maxFloor, roomCount, address, space, images, owner, metro,
+    price, description, title, floor, maxFloor, roomCount, address, space, images, owner, metro, options, rules,
   } = accommodation;
   return (
-    <div className="accommodation-view">
-      <div className="title-block">
-        <div>
-          {title}
-        </div>
-        <div>
-          <span className="price">
-            {price.toLocaleString()}
-          </span>
-          ₽/мес
-        </div>
-      </div>
-      <div className="address">
-        {address}
-      </div>
-      <div className="metro-block">
-        {metro.map((metroItem) => (
-          <div className="metro-item" key={metroItem.name}>
-            <Badge
-              color={metroItem.color}
-              text={(
-                <span>
-                  {metroItem.name}
-                  <span className="transport-time">
-                    {` (${metroItem.transportTime} минут ${_.lowerFirst(metroItem.transportType)})`}
-                  </span>
-                </span>
-                )}
-            />
-          </div>
-        ))}
-      </div>
-      <div className="image-block">
-        <Carousel arrows dotPosition="top" nextArrow={<CaretRightOutlined />} prevArrow={<CaretLeftOutlined />}>
-          {images.map((image) => (
-            <div key={image.src}>
-              <Image height={650} key={image.src} src={image.src} />
-            </div>
-          ))}
-        </Carousel>
-      </div>
+    <div className="accommodation-page-block">
+      <TitleAddressBlock title={title} price={price} address={address} metro={metro} />
+      <CarouselBlock images={images} />
+      <SpaceBlock space={space} floor={floor} maxFloor={maxFloor} roomCount={roomCount} />
+      <BenefitDescriptionBlock description={description} options={options} rules={rules} />
+      <OwnerInfoBlock owner={owner} />
     </div>
   );
 };

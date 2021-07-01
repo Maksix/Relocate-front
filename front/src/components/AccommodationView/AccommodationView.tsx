@@ -2,7 +2,6 @@ import React from 'react';
 import IPage from '../../interfaces/IPage';
 import './AccommodationView.less';
 import AccommodationBlock from './AccommodationBlock/AccommodationBlock';
-import OwnerInfoBlock from './OwnerInfoBlock/OwnerInfoBlock';
 
 const accommodation = {
   id: 1,
@@ -61,12 +60,36 @@ const accommodation = {
     name: 'Максим',
     phoneNumber: '8(800)555-35-35',
   },
+  options: [
+    {
+      value: 'balcony',
+    },
+    {
+      value: 'elevator',
+    },
+    {
+      value: 'conditioner',
+    },
+    {
+      value: 'fridge',
+    },
+    {
+      value: 'dishWasher',
+    },
+  ],
+  rules: [
+    {
+      value: 'isAllowedPets',
+    },
+    {
+      value: 'isAllowedSmoking',
+    },
+  ],
 };
 
 const AccommodationView: React.FC<IPage> = () => (
   <div className="view-page">
     <AccommodationBlock accommodation={accommodation} />
-    <OwnerInfoBlock />
   </div>
 );
 
