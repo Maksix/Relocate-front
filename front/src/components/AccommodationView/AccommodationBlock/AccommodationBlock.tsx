@@ -5,35 +5,13 @@ import SpaceBlock from './SpaceBlock/SpaceBlock';
 import TitleAddressBlock from './TitleAddressBlock/TitleAddressBlock';
 import CarouselBlock from './CarouselBlock/CarouselBlock';
 import BenefitDescriptionBlock from './BenefitDescriptionBlock/BenefitDescriptionBlock';
+import { AccommodationType } from '../../../interfaces/AccommodationTypes/AccommodationType';
 
-type AccommodationType = {
-  accommodation: {
-    id: number,
-    price: number,
-    description: string,
-    title: string,
-    floor: number,
-    maxFloor: number,
-    roomCount: number,
-    address: string,
-    space: number,
-    metro: {
-      name: string,
-      color: string,
-      transportTime: number,
-      transportType: string,
-    }[]
-    images: { src: string }[]
-    owner: {
-      name: string,
-      phoneNumber: string,
-    }
-    options: { value: string }[]
-    rules: { value: string }[]
-  };
+type PropsType = {
+  accommodation: AccommodationType
 };
 
-const AccommodationBlock: React.FC<AccommodationType> = ({ accommodation }: AccommodationType) => {
+const AccommodationBlock = ({ accommodation }: PropsType): JSX.Element => {
   const {
     price, description, title, floor, maxFloor, roomCount, address, space, images, owner, metro, options, rules,
   } = accommodation;

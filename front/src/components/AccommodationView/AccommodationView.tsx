@@ -2,8 +2,9 @@ import React from 'react';
 import IPage from '../../interfaces/IPage';
 import './AccommodationView.less';
 import AccommodationBlock from './AccommodationBlock/AccommodationBlock';
+import { AccommodationType } from '../../interfaces/AccommodationTypes/AccommodationType';
 
-const accommodation = {
+const accommodation: AccommodationType = {
   id: 1,
   title: 'Сдается 2-комнатная квартира, 65м²',
   description: 'Сдаётся впервые уютная светлая квартира от собственника в 3 минутах ходьбы от ст.м. Котельники.'
@@ -62,27 +63,59 @@ const accommodation = {
   },
   options: [
     {
-      value: 'balcony',
+      title: 'rentTerm',
+      value: 'short',
     },
     {
-      value: 'elevator',
+      title: 'wcType',
+      value: 'combined',
     },
     {
-      value: 'conditioner',
+      title: 'bathType',
+      value: 'shower',
     },
     {
-      value: 'fridge',
+      title: 'balcony',
+      value: false,
     },
     {
-      value: 'dishWasher',
+      title: 'elevator',
+      value: true,
+    },
+    {
+      title: 'conditioner',
+      value: true,
+    },
+    {
+      title: 'fridge',
+      value: false,
+    },
+    {
+      title: 'dishWasher',
+      value: true,
+    },
+    {
+      title: 'laundry',
+      value: false,
+    },
+    {
+      title: 'internet',
+      value: false,
+    },
+    {
+      title: 'tv',
+      value: true,
     },
   ],
   rules: [
     {
-      value: 'isAllowedPets',
+      isAllowedPets: false,
     },
     {
-      value: 'isAllowedSmoking',
+      isAllowedSmoking: true,
+    },
+    {
+      isAllowedChildren: false,
     },
   ],
 };

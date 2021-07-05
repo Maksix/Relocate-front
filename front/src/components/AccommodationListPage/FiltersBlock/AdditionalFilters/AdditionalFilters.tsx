@@ -2,6 +2,7 @@ import React from 'react';
 import './AdditionalFilters.less';
 import { Collapse, Checkbox, Input } from 'antd';
 import { DownOutlined } from '@ant-design/icons';
+import { AccommodationOptionsLabelType } from '../../../../interfaces/AccommodationTypes/OptionsType';
 
 const { Panel } = Collapse;
 
@@ -18,13 +19,51 @@ export const rulesOfAccommodation = [
     value: 'isAllowedChildren',
     label: 'Можно с детьми',
   },
-  {
-    value: 'isAllowedParties',
-    label: 'Подходит для мероприятий',
-  },
 ];
 
-export const accommodationOptions = [
+export const accommodationOptions: AccommodationOptionsLabelType = [
+  {
+    value: 'rentTerm',
+    label: 'Длительность аренды',
+    options: [
+      {
+        value: 'short',
+        label: 'Краткосрочная (до 3-х мес)',
+      },
+      {
+        value: 'long',
+        label: 'Долгосрочная',
+      },
+    ],
+  },
+  {
+    value: 'wcType',
+    label: 'Сан. узел',
+    options: [
+      {
+        value: 'combined',
+        label: 'Совмещенный',
+      },
+      {
+        value: 'separated',
+        label: 'Раздельный',
+      },
+    ],
+  },
+  {
+    value: 'bathType',
+    label: 'Тип ванной',
+    options: [
+      {
+        value: 'bath',
+        label: 'Ванная',
+      },
+      {
+        value: 'shower',
+        label: 'Душ',
+      },
+    ],
+  },
   {
     value: 'balcony',
     label: 'Балкон',
