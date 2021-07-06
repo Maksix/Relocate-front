@@ -109,13 +109,16 @@ const accommodation: AccommodationType = {
   ],
   rules: [
     {
-      isAllowedPets: false,
+      title: 'isAllowedPets',
+      value: true,
     },
     {
-      isAllowedSmoking: true,
+      title: 'isAllowedSmoking',
+      value: true,
     },
     {
-      isAllowedChildren: false,
+      title: 'isAllowedChildren',
+      value: false,
     },
   ],
 };

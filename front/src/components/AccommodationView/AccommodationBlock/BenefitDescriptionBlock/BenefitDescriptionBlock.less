@@ -1,10 +1,15 @@
-.options-block {
+.accommodation-option-block {
   margin-bottom: 20px;
+  display: flex;
+
+  .options-block {
+    margin-right: 50px;
+  }
 
   .option {
     margin: 20px 0;
 
-    span {
+    .option-label {
       margin-left: 10px;
     }
   }
@@ -14,7 +19,27 @@
   margin-bottom: 20px;
 }
 
-.block-title {
+.description-title {
   font-size: 18px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
+
+@media screen and (max-width: 660px) {
+  .accommodation-option-block {
+    flex-direction: column;
+
+    .option:last-child {
+      margin: 0;
+    }
+  }
+
+  .block-title {
+    font-size: 16px;
+    margin-bottom: 0;
+  }
+
+  .description-title {
+    font-size: 16px;
+  }
+}
+

@@ -1,11 +1,20 @@
 export type RulesType = [
   {
-    isAllowedPets: boolean,
+    title: 'isAllowedPets'
+    value: boolean,
   },
   {
-    isAllowedSmoking: boolean,
+    title: 'isAllowedSmoking'
+    value: boolean,
   },
   {
-    isAllowedChildren: boolean,
+    title: 'isAllowedChildren'
+    value: boolean,
   },
 ];
+
+export type RulesAccommodationOptionsType =
+{
+  value: string,
+  label: string,
+}[];

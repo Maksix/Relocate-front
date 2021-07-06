@@ -3,10 +3,11 @@ import './AdditionalFilters.less';
 import { Collapse, Checkbox, Input } from 'antd';
 import { DownOutlined } from '@ant-design/icons';
 import { AccommodationOptionsLabelType } from '../../../../interfaces/AccommodationTypes/OptionsType';
+import { RulesAccommodationOptionsType } from '../../../../interfaces/AccommodationTypes/RulesType';
 
 const { Panel } = Collapse;
 
-export const rulesOfAccommodation = [
+export const accommodationRules: RulesAccommodationOptionsType = [
   {
     value: 'isAllowedPets',
     label: 'Можно с животными',
@@ -28,11 +29,11 @@ export const accommodationOptions: AccommodationOptionsLabelType = [
     options: [
       {
         value: 'short',
-        label: 'Краткосрочная (до 3-х мес)',
+        label: 'краткосрочная (до 3-х мес)',
       },
       {
         value: 'long',
-        label: 'Долгосрочная',
+        label: 'долгосрочная',
       },
     ],
   },
@@ -42,11 +43,11 @@ export const accommodationOptions: AccommodationOptionsLabelType = [
     options: [
       {
         value: 'combined',
-        label: 'Совмещенный',
+        label: 'совмещенный',
       },
       {
         value: 'separated',
-        label: 'Раздельный',
+        label: 'раздельный',
       },
     ],
   },
@@ -56,11 +57,11 @@ export const accommodationOptions: AccommodationOptionsLabelType = [
     options: [
       {
         value: 'bath',
-        label: 'Ванная',
+        label: 'ванная',
       },
       {
         value: 'shower',
-        label: 'Душ',
+        label: 'душ',
       },
     ],
   },
@@ -147,7 +148,7 @@ const AdditionalFilters: React.FC = () => (
         <div className="filter-title">
           Особенности
         </div>
-        {rulesOfAccommodation.map((rule) => (
+        {accommodationRules.map((rule) => (
           <div key={rule.value} className="checkbox-block">
             <Checkbox>
               {rule.label}
