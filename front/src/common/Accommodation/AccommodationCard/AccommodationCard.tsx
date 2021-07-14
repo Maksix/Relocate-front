@@ -27,15 +27,15 @@ const AccommodationCard: React.FC<AccommodationCardType> = ({ accommodation }: A
     <Card
       cover={(
         <Image.PreviewGroup>
-          <Image width={200} height={200} src="https://j.etagi.com/uploads/2020/10/stil-modern-75.jpg" />
-          <Image width={200} height={200} src="https://i.pinimg.com/originals/9b/29/b2/9b29b2b32dff399ff12a4d6a72cc47fb.jpg" />
+          <Image src="https://j.etagi.com/uploads/2020/10/stil-modern-75.jpg" />
+          <Image src="https://i.pinimg.com/originals/9b/29/b2/9b29b2b32dff399ff12a4d6a72cc47fb.jpg" />
         </Image.PreviewGroup>
       )}
     >
       <Link to={`/accommodation/${id}`}>
         <div className="metro-block">
           <Badge color="#DDB836" text="Авиамоторная" />
-          <span>15 минут пешком</span>
+          <span className="metro-time">15 минут пешком</span>
         </div>
         <div className="price-block">
           <span className="price">{price}</span>

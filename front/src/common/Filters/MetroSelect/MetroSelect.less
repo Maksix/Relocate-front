@@ -46,6 +46,40 @@
   }
 }
 
+@media screen and (max-width: 660px) {
+  .metro-select {
+    margin-bottom: 20px;
+    max-height: 50px;
+
+    .ant-select {
+      width: 245px;
+
+      .ant-select-selector {
+
+        .ant-badge-status-text {
+          font-size: 12px;
+        }
+
+        .ant-select-selection-placeholder {
+          font-size: 12px;
+        }
+      }
+    }
+    .ant-select-single.ant-select-lg:not(.ant-select-customize-input) .ant-select-selector::after,
+    .ant-select-single.ant-select-lg:not(.ant-select-customize-input) .ant-select-selector .ant-select-selection-item,
+    .ant-select-single.ant-select-lg:not(.ant-select-customize-input) .ant-select-selector .ant-select-selection-placeholder {
+      line-height: 48px;
+    }
+
+    .ant-select-single.ant-select-lg:not(.ant-select-customize-input) .ant-select-selector {
+      height: 50px;
+    }
+
+    .ant-select-single.ant-select-lg:not(.ant-select-customize-input):not(.ant-select-customize-input) .ant-select-selection-search-input {
+      height: 48px;
+    }
+  }
+}
 
 .filter-metro-select {
   margin-bottom: 20px;

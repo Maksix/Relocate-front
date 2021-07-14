@@ -4,12 +4,25 @@
   justify-content: center;
   grid-gap: 50px;
   grid-template-columns: repeat(auto-fill, 400px);
-  margin-bottom: 90px;
+  margin-bottom: 60px;
 }
 
 
 @media screen and (min-width: 1000px) {
   .accommodation-block {
     grid-gap: 50px 5%;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .accommodation-block {
+    grid-template-columns: repeat(auto-fill, 340px);
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .accommodation-block {
+    grid-template-columns: repeat(auto-fill, 300px);
+    margin-bottom: 25px;
   }
 }

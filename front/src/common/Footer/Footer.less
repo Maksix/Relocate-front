@@ -43,3 +43,27 @@
     }
   }
 }
+
+@media screen and (max-width: 440px) {
+  .footer {
+    padding: 25px 5px;
+    font-size: 12px;
+
+    .row {
+      justify-content: space-around;
+
+      .cell {
+        min-width: 75px;
+        width: 75px;
+      }
+
+      .cell:nth-child(3), .cell:nth-child(1) {
+        text-align: center;
+      }
+    }
+
+    .description {
+      font-size: 10px;
+    }
+  }
+}

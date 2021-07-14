@@ -2,6 +2,14 @@
   width: 400px;
   border: 1px solid #C4C4C4;
 
+  .ant-card-cover .ant-image {
+    width: 200px;
+    height: 200px;
+    .ant-image-img {
+      height: 200px;
+    }
+  }
+
   .ant-card-body {
     width: 400px;
 
@@ -12,6 +20,11 @@
         display: flex;
         justify-content: space-between;
         margin-bottom: 10px;
+
+        .metro-time {
+          margin: auto 0;
+          font-size: 14px;
+        }
       }
 
       .price-block {
@@ -42,6 +55,73 @@
 
       .description {
         font-size: 12px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .ant-card {
+    width: 340px;
+
+    .ant-card-cover .ant-image {
+      width: 170px;
+      height: 170px;
+
+      .ant-image-img {
+        height: 170px;
+      }
+    }
+
+    .ant-card-body {
+      width: 340px;
+
+      a {
+        .metro-block {
+          .ant-badge .ant-badge-status-text {
+            font-size: 16px;
+          }
+        }
+
+        .space-block {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .ant-card {
+    width: 300px;
+
+    .ant-card-cover .ant-image {
+      width: 150px;
+      height: 150px;
+
+      .ant-image-img {
+        height: 150px;
+      }
+    }
+
+    .ant-card-body {
+      width: 300px;
+
+      a .metro-block {
+        .ant-badge {
+
+          .ant-badge-status-text {
+            font-size: 14px;
+          }
+
+          .description {
+            font-size: 10px;
+          }
+        }
+
+        .metro-time {
+          font-size: 12px;
+        }
       }
     }
   }
