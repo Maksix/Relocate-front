@@ -2,7 +2,7 @@
 
   .ant-collapse {
     background-color: white;
-    border-radius: 0;
+    border-radius: 0 0 15px 15px;
     border-left: none;
     border-right: none;
     border-bottom: none;
@@ -10,6 +10,9 @@
     .ant-collapse-item:last-child {
       border-radius: 0;
       border-bottom: none;
+      .ant-collapse-content {
+        border-radius: 0 0 15px 15px;
+      }
     }
 
     .ant-collapse-header {
