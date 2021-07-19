@@ -18,7 +18,7 @@ const Header: React.FC = () => (
           Войти
         </Menu.Item>
         <Menu.Item key="place">
-          <Link to="/">
+          <Link to="/accommodation/new">
             Разместить объявление
           </Link>
         </Menu.Item>
