@@ -4,10 +4,8 @@ import './index.less';
 import App from './App';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Suspense fallback={<div>loading</div>}>
-      <App />
-    </Suspense>
-  </React.StrictMode>,
+  <Suspense fallback={<div>loading</div>}>
+    <App />
+  </Suspense>,
   document.getElementById('root'),
 );
